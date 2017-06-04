@@ -40,7 +40,14 @@ st Z,r21
 jmp sort
  
  
- 
+ //Moving over from app memory to SRAM using Insertion Sort as we go
+ //Loop through the list
+ //At start of list, first value is the lowest value
+ //This stays lowest value until you find one that's lower
+ //The new number is now your lowest value
+ //Keep going till end of list
+ //Insert your lowest value into SRAM and remove it from app memory
+ //Repeat until all data is into SRAM (already sorted)
  
  
 ldi r16,celsius ;student comment goes here
