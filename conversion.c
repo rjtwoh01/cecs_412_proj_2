@@ -2,9 +2,9 @@
 #include <avr/eeprom.h>
 #include <asf.h>
 
-uint8_t fahrenheit[20] = {32,34,36,37,39,41,43, 45,46,48,50,52,54,55,57,59,61,63,64,66};
-uint8_t celsiusConverted[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-uint8_t fahrenheitFinal[20];
+uint8_t fahrenheit[20] = {32,34,36,37,39,41,43, 45,46,48,50,52,54,55,57,59,61,63,64,66}; //create fahrenheit list
+uint8_t celsiusConverted[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; //celsisus list
+uint8_t fahrenheitFinal[20]; //new fahrenheit for read back to sram
 
 
 
