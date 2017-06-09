@@ -17,9 +17,9 @@ int main(void) {
 	}
 
 	//incremented by 20 in eeprom memory
-	for(int i = 20; i < 40; i++)
+	for(int i = 0; i < 20; i++)
 	{
-		eeprom_write_byte((uint8_t* )i, fahrenheit[i]); //writing to internal EEPROM as an I/O Device via NVM Controller + 20
+		eeprom_write_byte((uint8_t* )i+20, fahrenheit[i]); //writing to internal EEPROM as an I/O Device via NVM Controller + 20
 		//look at eeprom EEPROM Memory Window, address 0x0000
 	}
 	
