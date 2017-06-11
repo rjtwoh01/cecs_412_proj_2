@@ -63,16 +63,18 @@ finalCheck:
 cpi r17, 0 //compare swaps to 0
 brne sort //if not 0, we have to iterate again
  
-ldi r16,celsius ;student comment goes here
-add ZL,r16 ;student comment goes here
-ldi r16,0 ;student comment goes here
-adc ZH,r16 ;student comment goes here
-lpm ;lpm = lpm r0,Z in reality, what does this mean?
+ here: jmp here
+ 
+ldi r16,celsius ;loads celsius into r16
+add ZL,r16 ;add r16 and Z low
+ldi r16,0 ;load 0 into r16
+adc ZH,r16 ;add Z High into r16
+lpm ;lpm = lpm r0,Z load z into r0, default values with nothing specified
 sts output,r0 ;store look-up result to SRAM
-ret ;consider MAIN as a subroutine to return from - but back to where??
+ret ;consider MAIN as a subroutine to return from - conversion?
  
 ; Fahrenheit look-up table
 table: .db 3, 2, 7, 37, 5, 21, 60, 25, 8, 13, 52, 53, 54, 26, 9, 59, 61, 63, 64, 66
 .equ celsius = 5 ;modify Celsius from 0 to 19 degrees for different results
- 
+
 .exit
